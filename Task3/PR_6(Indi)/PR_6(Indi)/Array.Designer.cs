@@ -75,7 +75,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(443, 156);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 24);
+            this.label1.Size = new System.Drawing.Size(0, 19);
             this.label1.TabIndex = 1;
             // 
             // label2
@@ -83,7 +83,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(443, 193);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 24);
+            this.label2.Size = new System.Drawing.Size(0, 19);
             this.label2.TabIndex = 2;
             // 
             // label3
@@ -91,7 +91,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(443, 228);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 24);
+            this.label3.Size = new System.Drawing.Size(0, 19);
             this.label3.TabIndex = 3;
             // 
             // groupBox1
@@ -110,7 +110,7 @@
             this.radioButton_kor.AutoSize = true;
             this.radioButton_kor.Location = new System.Drawing.Point(17, 75);
             this.radioButton_kor.Name = "radioButton_kor";
-            this.radioButton_kor.Size = new System.Drawing.Size(79, 28);
+            this.radioButton_kor.Size = new System.Drawing.Size(64, 23);
             this.radioButton_kor.TabIndex = 1;
             this.radioButton_kor.Text = "Вручну";
             this.radioButton_kor.UseVisualStyleBackColor = true;
@@ -122,7 +122,7 @@
             this.radioButton_rand.Checked = true;
             this.radioButton_rand.Location = new System.Drawing.Point(17, 41);
             this.radioButton_rand.Name = "radioButton_rand";
-            this.radioButton_rand.Size = new System.Drawing.Size(114, 28);
+            this.radioButton_rand.Size = new System.Drawing.Size(91, 23);
             this.radioButton_rand.TabIndex = 0;
             this.radioButton_rand.TabStop = true;
             this.radioButton_rand.Text = "Автоматично";
@@ -138,7 +138,7 @@
             this.повернутисяДоВиборуЗадачToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(911, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(911, 25);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -149,20 +149,21 @@
             this.очиститиToolStripMenuItem});
             this.обчисленняToolStripMenuItem.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.обчисленняToolStripMenuItem.Name = "обчисленняToolStripMenuItem";
-            this.обчисленняToolStripMenuItem.Size = new System.Drawing.Size(104, 25);
+            this.обчисленняToolStripMenuItem.Size = new System.Drawing.Size(89, 21);
             this.обчисленняToolStripMenuItem.Text = "Обчислення";
+            this.обчисленняToolStripMenuItem.Click += new System.EventHandler(this.обчисленняToolStripMenuItem_Click);
             // 
             // обчислитиToolStripMenuItem
             // 
             this.обчислитиToolStripMenuItem.Name = "обчислитиToolStripMenuItem";
-            this.обчислитиToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
+            this.обчислитиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.обчислитиToolStripMenuItem.Text = "Обчислити";
             this.обчислитиToolStripMenuItem.Click += new System.EventHandler(this.обчислитиToolStripMenuItem_Click);
             // 
             // очиститиToolStripMenuItem
             // 
             this.очиститиToolStripMenuItem.Name = "очиститиToolStripMenuItem";
-            this.очиститиToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
+            this.очиститиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.очиститиToolStripMenuItem.Text = "Очистити";
             this.очиститиToolStripMenuItem.Click += new System.EventHandler(this.очиститиToolStripMenuItem_Click);
             // 
@@ -173,20 +174,20 @@
             this.зчитатиЗФайлуToolStripMenuItem});
             this.файлToolStripMenuItem.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
-            this.файлToolStripMenuItem.Size = new System.Drawing.Size(60, 25);
+            this.файлToolStripMenuItem.Size = new System.Drawing.Size(51, 21);
             this.файлToolStripMenuItem.Text = "Файл";
             // 
             // записатиУФайлToolStripMenuItem
             // 
             this.записатиУФайлToolStripMenuItem.Name = "записатиУФайлToolStripMenuItem";
-            this.записатиУФайлToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
+            this.записатиУФайлToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.записатиУФайлToolStripMenuItem.Text = "Записати у файл";
             this.записатиУФайлToolStripMenuItem.Click += new System.EventHandler(this.записатиУФайлToolStripMenuItem_Click);
             // 
             // зчитатиЗФайлуToolStripMenuItem
             // 
             this.зчитатиЗФайлуToolStripMenuItem.Name = "зчитатиЗФайлуToolStripMenuItem";
-            this.зчитатиЗФайлуToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
+            this.зчитатиЗФайлуToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.зчитатиЗФайлуToolStripMenuItem.Text = "Зчитати з файлу";
             this.зчитатиЗФайлуToolStripMenuItem.Click += new System.EventHandler(this.зчитатиЗФайлуToolStripMenuItem_Click);
             // 
@@ -194,7 +195,7 @@
             // 
             this.повернутисяДоВиборуЗадачToolStripMenuItem.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.повернутисяДоВиборуЗадачToolStripMenuItem.Name = "повернутисяДоВиборуЗадачToolStripMenuItem";
-            this.повернутисяДоВиборуЗадачToolStripMenuItem.Size = new System.Drawing.Size(226, 25);
+            this.повернутисяДоВиборуЗадачToolStripMenuItem.Size = new System.Drawing.Size(189, 21);
             this.повернутисяДоВиборуЗадачToolStripMenuItem.Text = "Повернутися до вибору задач";
             this.повернутисяДоВиборуЗадачToolStripMenuItem.Click += new System.EventHandler(this.повернутисяДоВиборуЗадачToolStripMenuItem_Click);
             // 
@@ -202,14 +203,14 @@
             // 
             this.textBox_Vid.Location = new System.Drawing.Point(187, 225);
             this.textBox_Vid.Name = "textBox_Vid";
-            this.textBox_Vid.Size = new System.Drawing.Size(100, 32);
+            this.textBox_Vid.Size = new System.Drawing.Size(100, 27);
             this.textBox_Vid.TabIndex = 10;
             // 
             // textBox_Do
             // 
             this.textBox_Do.Location = new System.Drawing.Point(321, 225);
             this.textBox_Do.Name = "textBox_Do";
-            this.textBox_Do.Size = new System.Drawing.Size(100, 32);
+            this.textBox_Do.Size = new System.Drawing.Size(100, 27);
             this.textBox_Do.TabIndex = 11;
             // 
             // label4
@@ -217,7 +218,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(183, 195);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 24);
+            this.label4.Size = new System.Drawing.Size(26, 19);
             this.label4.TabIndex = 12;
             this.label4.Text = "Від";
             // 
@@ -226,7 +227,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(317, 193);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(28, 24);
+            this.label5.Size = new System.Drawing.Size(23, 19);
             this.label5.TabIndex = 13;
             this.label5.Text = "До";
             // 
@@ -235,7 +236,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(183, 131);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(197, 24);
+            this.label6.Size = new System.Drawing.Size(152, 19);
             this.label6.TabIndex = 14;
             this.label6.Text = "Кількість елементів масиву:";
             // 
@@ -243,14 +244,14 @@
             // 
             this.textBox_Mezhi.Location = new System.Drawing.Point(187, 156);
             this.textBox_Mezhi.Name = "textBox_Mezhi";
-            this.textBox_Mezhi.Size = new System.Drawing.Size(100, 32);
+            this.textBox_Mezhi.Size = new System.Drawing.Size(100, 27);
             this.textBox_Mezhi.TabIndex = 15;
             // 
             // textBox_array
             // 
             this.textBox_array.Location = new System.Drawing.Point(187, 159);
             this.textBox_array.Name = "textBox_array";
-            this.textBox_array.Size = new System.Drawing.Size(234, 32);
+            this.textBox_array.Size = new System.Drawing.Size(234, 27);
             this.textBox_array.TabIndex = 16;
             this.textBox_array.Visible = false;
             this.textBox_array.TextChanged += new System.EventHandler(this.textBox_array_TextChanged);
@@ -261,7 +262,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(170, 132);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(273, 24);
+            this.label7.Size = new System.Drawing.Size(210, 19);
             this.label7.TabIndex = 17;
             this.label7.Text = "Введіть елементи масиву через пробіл:";
             this.label7.Visible = false;
@@ -272,7 +273,7 @@
             // 
             // ArrayForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(911, 286);
