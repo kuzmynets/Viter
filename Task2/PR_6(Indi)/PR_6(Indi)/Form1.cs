@@ -18,7 +18,7 @@ namespace PR_6_Indi_
         }
         private void but_End_Click(object sender, EventArgs e)
         {
-           
+            Application.Exit();
         }
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
