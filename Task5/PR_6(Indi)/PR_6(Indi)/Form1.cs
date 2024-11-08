@@ -98,7 +98,18 @@ namespace PR_6_Indi_
         }
 
 
-        
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            cell_AU Cell_PC = new cell_AU();
+            Cell_PC.Show();
+            Hide();
+        }
+        private void label5_Click(object sender, EventArgs e)
+        {
+            cell_AU Cell_PC = new cell_AU();
+            Cell_PC.Show();
+            Hide();
+        }
 
         private void Main_Menu_Load(object sender, EventArgs e)
         {
