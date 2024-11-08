@@ -55,7 +55,18 @@ namespace PR_6_Indi_
         }
 
 
-       
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Tab_function tab_function = new Tab_function();
+            tab_function.Show();
+            Hide();
+        }
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Tab_function tab_function = new Tab_function();
+            tab_function.Show();
+            Hide();
+        }
 
 
         private void Main_Menu_Load(object sender, EventArgs e)
