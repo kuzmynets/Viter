@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Array.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Array.Designer.cs">
+      <DependentUpon>Array.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,9 @@
     <Compile Include="Tab_function.Designer.cs">
       <DependentUpon>Tab_function.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Array.resx">
+      <DependentUpon>Array.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

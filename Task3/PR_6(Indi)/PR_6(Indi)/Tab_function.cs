@@ -69,7 +69,7 @@ namespace PR_6_Indi_
         private void tab(double xLeft, double xRight, double xStep)
         {
             var file = new StreamWriter(Path.Combine(Directory.GetCurrentDirectory(), "tab.txt"));
-            double y = 0, sum = 0;
+            double y=0, sum = 0;
             int count = 0;
             listBox1.Items.Add("x\ty");
             file.WriteLine("x\ty");

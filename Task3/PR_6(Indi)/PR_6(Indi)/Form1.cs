@@ -22,6 +22,7 @@ namespace PR_6_Indi_
         }
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (MessageBox.Show("Ви точно хочете вийти?", "Перевірка", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No) e.Cancel = true;
         }
 
 
@@ -68,6 +69,22 @@ namespace PR_6_Indi_
             Hide();
         }
 
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            ArrayForm arrayForm = new ArrayForm();
+            arrayForm.Show();
+            Hide();
+        }
+        private void label3_Click(object sender, EventArgs e)
+        {
+            ArrayForm arrayForm = new ArrayForm();
+            arrayForm.Show();
+            Hide();
+        }
+
+
+        
 
         private void Main_Menu_Load(object sender, EventArgs e)
         {
