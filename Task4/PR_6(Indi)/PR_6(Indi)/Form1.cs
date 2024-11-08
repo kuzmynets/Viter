@@ -84,6 +84,20 @@ namespace PR_6_Indi_
         }
 
 
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            TD_array tD_Array = new TD_array();
+            tD_Array.Show();
+            Hide();
+        }
+        private void label4_Click(object sender, EventArgs e)
+        {
+            TD_array tD_Array = new TD_array();
+            tD_Array.Show();
+            Hide();
+        }
+
+
         
 
         private void Main_Menu_Load(object sender, EventArgs e)
