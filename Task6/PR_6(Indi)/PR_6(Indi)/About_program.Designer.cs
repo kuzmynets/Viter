@@ -38,8 +38,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.label3 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -61,7 +59,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(24, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(375, 56);
+            this.label1.Size = new System.Drawing.Size(314, 46);
             this.label1.TabIndex = 2;
             this.label1.Text = "Програма була створенна з ціллю обчислення, \r\nта виконання завдань.";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -71,17 +69,16 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(24, 105);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(435, 28);
+            this.label2.Size = new System.Drawing.Size(360, 23);
             this.label2.TabIndex = 3;
             this.label2.Text = "Автори: Гриньов Олександр,Дідик Максим, Грібов Артем";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(110, 170);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(169, 28);
+            this.label4.Size = new System.Drawing.Size(140, 23);
             this.label4.TabIndex = 4;
             this.label4.Text = "Компанія: Політехнік";
             // 
@@ -90,7 +87,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(20, 243);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(210, 28);
+            this.label5.Size = new System.Drawing.Size(176, 23);
             this.label5.TabIndex = 5;
             this.label5.Text = "Посилання на авторів (Тг):\r\n";
             // 
@@ -109,11 +106,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(236, 215);
+            this.label6.Location = new System.Drawing.Point(257, 223);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(137, 28);
+            this.label6.Size = new System.Drawing.Size(114, 69);
             this.label6.TabIndex = 7;
-            this.label6.Text = "@oleksandr_hrn";
+            this.label6.Text = "@oleksandr_hrn\r\n@m_didyk\r\n@art_hribovv";
             // 
             // toolTip1
             // 
@@ -124,29 +121,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(144, 142);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 28);
+            this.label3.Size = new System.Drawing.Size(93, 23);
             this.label3.TabIndex = 8;
             this.label3.Text = "Група: ПІ-221";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(236, 243);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 28);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "@m_didyk";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(236, 271);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(115, 28);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "@art_hribovv";
             // 
             // imageList1
             // 
@@ -167,14 +144,12 @@
             // 
             // About_program
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(870, 382);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button2);
@@ -209,8 +184,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ImageList imageList1;
     }
