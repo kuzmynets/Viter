@@ -28,7 +28,9 @@ namespace PR_6_Indi_
 
         private void but_aboutProgram_Click(object sender, EventArgs e)
         {
-            
+            About_program program = new About_program();
+            program.Show();
+            Hide();
             
         }
         private async void but_zavd_Click(object sender, EventArgs e)

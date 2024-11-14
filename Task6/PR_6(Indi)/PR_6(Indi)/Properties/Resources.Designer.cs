@@ -73,6 +73,16 @@ namespace PR_6_Indi_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _60479 {
+            get {
+                object obj = ResourceManager.GetObject("60479", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _7__1_ {
             get {
                 object obj = ResourceManager.GetObject("7 (1)", resourceCulture);
