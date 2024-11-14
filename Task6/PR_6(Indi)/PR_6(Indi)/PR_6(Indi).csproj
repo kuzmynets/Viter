@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About_program.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About_program.Designer.cs">
+      <DependentUpon>About_program.cs</DependentUpon>
+    </Compile>
     <Compile Include="Array.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,9 @@
     <Compile Include="Tab_function.Designer.cs">
       <DependentUpon>Tab_function.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="About_program.resx">
+      <DependentUpon>About_program.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Array.resx">
       <DependentUpon>Array.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +158,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Знімок екрана 2024-06-04 222129.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\60479.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

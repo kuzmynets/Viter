@@ -16,10 +16,10 @@ namespace PR_6_Indi_
 {
     public partial class cell_AU : Form
     {
-
+        
         struct AU
         {
-            public string num, year, marka, kolir, potuzh, cina;
+            public string num, year, marka, kolir, potuzh,cina;
         }
         //struct Compl
         //{
@@ -31,11 +31,11 @@ namespace PR_6_Indi_
 
 
         AU au;
-
+       
 
 
         AU[] arr_AU;
-
+        
 
 
         public cell_AU()
@@ -75,14 +75,14 @@ namespace PR_6_Indi_
                 }
                 else
                 {
-
-
-
-                    записатиУToolStripMenuItem_Click(sender, e);
-                    Main_Menu form = new Main_Menu();
-                    form.Show();
-                    Hide();
-
+                   
+                   
+                    
+                        записатиУToolStripMenuItem_Click(sender, e);
+                        Main_Menu form = new Main_Menu();
+                        form.Show();
+                        Hide();
+                    
                 }
             }
             else
@@ -98,14 +98,14 @@ namespace PR_6_Indi_
             toolTip1.SetToolTip(txt_Vid, "Введіть мінімальну суму вартості");
             toolTip1.SetToolTip(txt_Do, "Введіть максимальну суму вартості");
             toolTip1.SetToolTip(txt_search_au, "Введіть назву марок, які хочете знайти");
-            toolTip1.SetToolTip(bt_delate, "Для того щоб видалити дані, потрібно виділити всі стовпці в табличці");
+            toolTip1.SetToolTip(bt_delate,"Для того щоб видалити дані, потрібно виділити всі стовпці в табличці");
             toolTip1.SetToolTip(bt_clear, "Для того щоб видалити дані, потрібно вибрати дані в ComboBox");
             if (radioButton_AU.Checked)
                 txt_nameAU.Focus();
             else
                 txt_nameAut.Focus();
             dg_car.AllowUserToAddRows = false;
-
+            
             dg_search.AllowUserToAddRows = false;
         }
 
@@ -115,7 +115,7 @@ namespace PR_6_Indi_
 
             if (radioButton_AU.Checked)
             {
-
+               
                 foreach (DataGridViewColumn column in dg_car.Columns)
                     column.ReadOnly = true;
 
@@ -179,11 +179,11 @@ namespace PR_6_Indi_
                 }
 
                 au.year = selectedDate.ToString("yyyy-MM-dd");
-                au.cina = txt_cinaAU.Text;
+                au.cina= txt_cinaAU.Text;
 
                 dg_car.Rows.Add(au.num, au.marka, au.kolir, au.potuzh, au.year, au.cina);
 
-
+                
                 create_array();
                 newComboBox();
                 FormatData_Comma();
@@ -192,8 +192,8 @@ namespace PR_6_Indi_
             else
             {
 
-
-
+               
+                   
                 if (IsNumeric(txt_potuzhAuto.Text) == false)
                 {
                     MessageBox.Show("Поле ціна має містити лише числові дані!", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -239,7 +239,7 @@ namespace PR_6_Indi_
                 //compl.year_Aut = selectedDate.ToString("yyyy-MM-dd");
                 //compl.cina_Aut = txt_potuzhAuto.Text;
 
-
+               
 
                 create_array();
                 newComboBox();
@@ -256,9 +256,9 @@ namespace PR_6_Indi_
                     if (saveFileDialog1.FileName == null) return;
 
                     string fileName = saveFileDialog1.FileName;
-                    if (!fileName.EndsWith(".au"))
+                    if (!fileName.EndsWith(".au")) 
                     {
-                        fileName += ".au";
+                        fileName += ".au"; 
                     }
 
                     BinaryWriter fout = new BinaryWriter(new FileStream(fileName, FileMode.Create));
@@ -287,14 +287,14 @@ namespace PR_6_Indi_
                     }
 
                     BinaryWriter fout = new BinaryWriter(new FileStream(fileName, FileMode.Create));
-
+                   
                     fout.Close();
                 }
             }
         }
         private void зчитатиЗФайлуToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+           
             if (radioButton_AU.Checked)
             {
                 dg_car.Rows.Clear();
@@ -322,7 +322,7 @@ namespace PR_6_Indi_
             }
             else
             {
-
+               
                 openFileDialog2.Filter = "Compl files (*.compl)|*.compl";
                 openFileDialog2.FilterIndex = 1;
 
@@ -334,8 +334,8 @@ namespace PR_6_Indi_
                     n = 0;
                     while (fin.BaseStream.Position != fin.BaseStream.Length)
                     {
-
-
+                        
+                     
                     }
                     fin.Close();
                     create_array();
@@ -347,8 +347,8 @@ namespace PR_6_Indi_
         }
         private void button2_Click(object sender, EventArgs e)
         {
-
-            if (comboBox_search_au.Text == string.Empty || comboBox_search_au.Items.Count == 1)
+           
+            if (comboBox_search_au.Text == string.Empty||comboBox_search_au.Items.Count == 1)
             {
                 MessageBox.Show("В табличці немає жодних даних!", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (radioButton_AU.Checked)
@@ -361,7 +361,7 @@ namespace PR_6_Indi_
             {
                 dg_search.Rows.Clear();
             }
-
+                      
             create_array();
 
             if (radioButton_Obm.Checked)
@@ -399,7 +399,7 @@ namespace PR_6_Indi_
                 else if (radioButtonAU_search.Checked)
                 {
                     int[] cinaArray = new int[arr_AU.Length];
-
+                    
                     for (int i = 0; i < arr_AU.Length; i++)
                     {
                         string cinaau = arr_AU[i].cina.Replace(",", "").Replace(" ", "");
@@ -413,7 +413,7 @@ namespace PR_6_Indi_
                             {
                                 count_mezhi++;
                                 count_name++;
-                                dg_search.Rows.Add(arr_AU[i].marka, arr_AU[i].kolir, arr_AU[i].potuzh, arr_AU[i].year, arr_AU[i].cina);
+                                dg_search.Rows.Add(arr_AU[i].marka, arr_AU[i].kolir,arr_AU[i].potuzh, arr_AU[i].year,arr_AU[i].cina);
                                 //comboBox_search_au.SelectedIndex = i;
                             }
                         }
@@ -438,7 +438,7 @@ namespace PR_6_Indi_
                     //    int.TryParse(cinaau, out cinaArray[i]);
                     //}
 
-
+                   
                     if (count_name == 0)
                     {
                         MessageBox.Show($"Даних за назвою *{txt_search_au.Text.ToString()}*", "Попередження", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -473,7 +473,7 @@ namespace PR_6_Indi_
                 }
                 else
                 {
-
+                    
                     if (count_name == 0)
                     {
                         MessageBox.Show($"Даних за назвою *{txt_search_au.Text.ToString()}*", "Попередження", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -481,7 +481,7 @@ namespace PR_6_Indi_
                     }
                 }
             }
-
+            
             if (radioButtonSortByPower.Checked)
             {
                 SortuvannyaZaPotuzhnistyu();
@@ -505,7 +505,7 @@ namespace PR_6_Indi_
                 string searchTerm = txt_search_au.Text;
                 SearchAndDisplayResults(searchTerm);
             }
-
+           
         }
         private void SearchAndDisplayResults(string searchTerm)
         {
@@ -572,7 +572,7 @@ namespace PR_6_Indi_
             if (radioButtonAU_search.Checked == false)
                 radioButtonAU_search.Checked = true;
             newComboBox();
-
+            
             dg_car.Visible = true;
 
             txt_nameAU.TabIndex = 1;
@@ -597,8 +597,8 @@ namespace PR_6_Indi_
             txt_nameAut.Visible = false;
             txt_markAut.Visible = false;
         }
-
-
+        
+       
         private void radioButtonAU_search_CheckedChanged(object sender, EventArgs e)
         {
             dg_search.Rows.Clear();
@@ -636,19 +636,19 @@ namespace PR_6_Indi_
         {
             if (radioButton_AU.Checked)
                 dg_car.Rows.Clear();
-
-
+            
+               
         }
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            dg_search.Rows.Clear();
+            dg_search.Rows.Clear();  
         }
         private void очиститиToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Clearing_txtbox();
             dg_car.Rows.Clear();
             dg_search.Rows.Clear();
-
+           
 
             txt_Do.Clear();
             txt_Vid.Clear();
@@ -661,8 +661,7 @@ namespace PR_6_Indi_
         {
             if (radioButton_AU.Checked)
             {
-                if (dg_car.RowCount != 0)
-                {
+                if (dg_car.RowCount != 0) {
                     if (dg_car.SelectedRows.Count > 0)
                         dg_car.Rows.Remove(dg_car.SelectedRows[0]);
                     else
@@ -671,10 +670,9 @@ namespace PR_6_Indi_
                 else
                     MessageBox.Show("Щоб видалити дані, потрібно їх ввести в табличку", "Попередження", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
-            else
-            {
-                MessageBox.Show("Щоб видалити дані, потрібно їх ввести в табличку", "Попередження", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            
+                else { 
+                    MessageBox.Show("Щоб видалити дані, потрібно їх ввести в табличку", "Попередження", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         private void bt_clear_Click(object sender, EventArgs e)
@@ -693,7 +691,7 @@ namespace PR_6_Indi_
                             comboBox_search_au.SelectedIndex = comboBox_search_au.SelectedIndex + 1;
                         else
                             comboBox_search_au.SelectedIndex = comboBox_search_au.SelectedIndex - 1;
-
+                        
                     }
                     else
                         MessageBox.Show("ComboBox порожній. Немає елементів для видалення", "Попередження", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -708,19 +706,19 @@ namespace PR_6_Indi_
                 {
                     if (comboBox_search_au.Items.Count > 1)
                     {
-
+                       
                         dg_search.Rows.Clear();
                         comboBox_search_au.Items.RemoveAt(comboBox_search_au.SelectedIndex);
                         if (comboBox_search_au.SelectedIndex < comboBox_search_au.Items.Count)
                             comboBox_search_au.SelectedIndex = comboBox_search_au.SelectedIndex + 1;
                         else
-                            comboBox_search_au.SelectedIndex = comboBox_search_au.SelectedIndex - 1;
+                            comboBox_search_au.SelectedIndex = comboBox_search_au.SelectedIndex - 1;   
                     }
-                    else
+                    else    
                         MessageBox.Show("ComboBox порожній. Немає елементів для видалення", "Попередження", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
-                    MessageBox.Show("Будь ласка, виберіть елемент у ComboBox для видалення", "Попередження", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Будь ласка, виберіть елемент у ComboBox для видалення", "Попередження", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -740,10 +738,10 @@ namespace PR_6_Indi_
             else
             {
                 //int i;
-
+                
                 this.comboBox_search_au.Items.Clear();
-
-                //comboBox_search_au.Items.Add(arr_Compl[i].mark_Aut);
+                
+                    //comboBox_search_au.Items.Add(arr_Compl[i].mark_Aut);
                 comboBox_search_au.Items.Add(" ");
                 comboBox_search_au.SelectedIndex = 0;
             }
@@ -759,7 +757,7 @@ namespace PR_6_Indi_
 
             txt_nameAU.Focus();
 
-
+            
         }
         private void create_array()
         {
@@ -776,7 +774,7 @@ namespace PR_6_Indi_
                     arr_AU[i].cina = Convert.ToString(dg_car.Rows[i].Cells[5].Value);
                 }
             }
-
+            
         }
         private void FormatData_Comma()
         {
@@ -797,7 +795,7 @@ namespace PR_6_Indi_
             }
             else
             {
-
+                
             }
         }
         private bool IsNumeric(string text)
@@ -850,10 +848,10 @@ namespace PR_6_Indi_
             //else
             //{
             //    Array.Sort(arr_Compl, (x, y) => x.cina_Aut.CompareTo(y.cina_Aut));
-
+                
             //}
         }
-
+        
 
         private void ZnaytiNaydeshevshuINaymenshPotuzhnu()
         {
@@ -869,9 +867,9 @@ namespace PR_6_Indi_
                 var filteredaus = arr_AU.Where(au => string.Equals(au.marka, marka, StringComparison.OrdinalIgnoreCase));
                 if (filteredaus.Any())
                 {
-
+                    
                     var cheapestau = filteredaus.OrderBy(au => au.cina).FirstOrDefault();
-
+                    
                     var leastPowerfulau = filteredaus.OrderBy(au => au.potuzh).FirstOrDefault();
 
                     if (cheapestau.cina != null && leastPowerfulau.potuzh != null)
@@ -890,18 +888,18 @@ namespace PR_6_Indi_
             }
         }
 
-
+    
         private void NaipotuzhnishaChervonogoNaishevshaChornogo()
         {
             var mostPowerfulRed = arr_AU.Where(au => au.kolir.ToLower() == "червоний").OrderByDescending(au => au.potuzh).FirstOrDefault();
             var cheapestBlack = arr_AU.Where(au => au.kolir.ToLower() == "чорний").OrderBy(au => au.cina).FirstOrDefault();
-
+            
             if (mostPowerfulRed.potuzh != null)
             {
                 dg_search.Rows.Clear();
                 dg_search.Rows.Add(au.marka, au.kolir, au.potuzh, au.year, au.cina);
                 MessageBox.Show($"Найпотужніша червоного кольору: {mostPowerfulRed.marka} {mostPowerfulRed.potuzh}");
-
+               
             }
             else
             {
@@ -910,39 +908,39 @@ namespace PR_6_Indi_
 
             if (cheapestBlack.cina != null)
             {
-
+                
                 MessageBox.Show($"Найдешевша чорного кольору: {cheapestBlack.marka} {cheapestBlack.cina}");
-
+                
             }
             else
             {
                 MessageBox.Show("Немає чорного aвто.");
             }
-
+           
         }
         private void MarkyZOdnakovoyuTsinoyuTaRiznymyKoloramy()
-        {
-            var groupedByPrice = arr_AU.GroupBy(au => au.cina)
-                .Where(group => group.Select(au => au.kolir).Distinct().Count() > 1);
-            dg_search.Rows.Clear();
-            foreach (var group in groupedByPrice)
-            {
-                foreach (var au in group)
                 {
-                    dg_search.Rows.Add(au.marka, au.kolir, au.potuzh, au.year, au.cina);
+                    var groupedByPrice = arr_AU.GroupBy(au => au.cina)
+                        .Where(group => group.Select(au => au.kolir).Distinct().Count() > 1);
+                    dg_search.Rows.Clear();
+                    foreach (var group in groupedByPrice)
+                    {
+                        foreach (var au in group)
+                        {
+                            dg_search.Rows.Add(au.marka, au.kolir, au.potuzh, au.year, au.cina); 
+                        }
+                    }
                 }
-            }
-        }
-        private void MarkyZTsinoyuPozaZadanymyMezhamy(int mezhaVid, int mezhaDo)
-        {
-            var outOfRangeaus = arr_AU.Where(au => string.Compare(au.cina, mezhaVid.ToString()) < 0 || string.Compare(au.cina, mezhaDo.ToString()) > 0);
+                private void MarkyZTsinoyuPozaZadanymyMezhamy(int mezhaVid, int mezhaDo)
+                {
+                    var outOfRangeaus = arr_AU.Where(au => string.Compare(au.cina, mezhaVid.ToString()) < 0 || string.Compare(au.cina, mezhaDo.ToString()) > 0);
 
-            dg_search.Rows.Clear();
-            foreach (var au in outOfRangeaus)
-            {
-                dg_search.Rows.Add(au.marka, au.kolir, au.potuzh, au.year, au.cina);
-            }
-        }
+                    dg_search.Rows.Clear();
+                    foreach (var au in outOfRangeaus)
+                    {
+                        dg_search.Rows.Add(au.marka, au.kolir, au.potuzh, au.year, au.cina);
+                    }
+                }
 
 
         private void radioButtonMostPowerfulRedCheapestBlack_CheckedChanged(object sender, EventArgs e)
@@ -976,7 +974,7 @@ namespace PR_6_Indi_
             groupBox3.Visible = true;
         }
 
-
+        
 
         private void radioButtonFindCheapestAndLeastPowerful_CheckedChanged_1(object sender, EventArgs e)
         {
